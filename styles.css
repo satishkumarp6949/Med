@@ -448,5 +448,43 @@
       
 
 
+/* Button hover ripple effect */
+.btn:hover {
+  animation: ripple 0.6s ease-out;
+  background-color: #004e5e;
+}
+
+@keyframes ripple {
+  0% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); }
+  100% { box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0); }
+}
+
+/* Product card hover lift */
+.product {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon subtle pop-in */
+.btn-action i {
+  transition: transform 0.3s ease;
+}
+.btn-action:hover i {
+  transform: scale(1.15);
+}
+
+
+
+
+
+/* Overflow fix */
+html, body { overflow-x: hidden; width: 100%; position: relative; }
+* { box-sizing: border-box; }
+img, .hero-img { max-width: 100%; height: auto; }
+
+
 
      
