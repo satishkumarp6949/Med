@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Store</title>
+  <style>
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 3rem;
+    }
+
+    body {
+      background-color: #003366;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .price-cart {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .price-cart p {
+      margin: 0;
+      font-weight: bold;
+      color: #003366;
+    }
+
+    .price-cart button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .price-cart button:hover {
+      background-color: #001f4d;
+    }
+
+    /* Tablet View (Max width: 650px) */
+    @media (max-width: 650px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .card h2 {
+        font-size: 1rem;
+      }
+
+      .price-cart p,
+      .price-cart button {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Mobile View (Max width: 450px) */
+    @media (max-width: 450px) {
+      h1 {
+        font-size: 1.8rem;
+        padding: 10px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 12px;
+      }
+
+      .card h2 {
+        font-size: 0.95rem;
+      }
+
+      .price-cart {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .price-cart p,
+      .price-cart button {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Medical Store</h1>
+  <div class="product-grid">
+    <div class="card">
+      <img src="/images/levo.jfif" alt="med 1">
+      <h2>Levocetirizine Tablet IP</h2>
+      <div class="price-cart">
+        <p>$35.00</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/images/bilas.jfif" alt="med 2">
+      <h2>Bilastine Tablet 20mg</h2>
+      <div class="price-cart">
+        <p>$12.50</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/images/thiro.jfif" alt="med 3">
+      <h2>Thiocolchicoside</h2>
+      <div class="price-cart">
+        <p>$22.00</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/images/glim.jfif" alt="med 4">
+      <h2>Heglime-M1</h2>
+      <div class="price-cart">
+        <p>$10.50</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/images/cefix.jfif" alt="med 5">
+      <h2>Cefixime Disersible IP</h2>
+      <div class="price-cart">
+        <p>$6.50</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/images/dolo-650-tablet-1000x1000.webp" alt="med 6">
+      <h2>Dolo 650</h2>
+      <div class="price-cart">
+        <p>$18.00</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/images/amol.jfif" alt="med 8">
+      <h2>Amlodipine Tablet IP</h2>
+      <div class="price-cart">
+        <p>$15.00</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/images/folic-acid-tablets-1000x1000.webp" alt="med 9">
+      <h2>Foliwell-5</h2>
+      <div class="price-cart">
+        <p>$25.50</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for popup -->
+  <script>
+    function addToCart() {
+      alert("Product added to cart");
+    }
+  </script>
+</body>
+</html>
